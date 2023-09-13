@@ -14,7 +14,7 @@ def is_enabled(value, default):
 SESSION = environ.get('dpx_log', 'Media_search')
 API_ID = int(environ['13125592'])
 API_HASH = environ['4c08ab6b656c6e18fa3c68508ef5e5b0']
-BOT_TOKEN = environ['6328374317:AAGlY__nBLj_5FtrSedx4oWJuH00B9N8fDg']
+BOT_TOKEN = environ['6004366181:AAHszsmk9lVj2NaddTz-v5ff2sW9dr6LVXo']
 
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
@@ -27,7 +27,7 @@ CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('dpx_
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
 ADMINS.append(1165215979)
-auth_channel = environ.get('AUTH_CHANNEL')
+auth_channel = environ.get('-1001980529724')
 auth_grp = environ.get('AUTH_GROUP')
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
@@ -38,7 +38,7 @@ DATABASE_NAME = environ.get('DATABASE_NAME', "Project 0")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
 # Others
-LOG_CHANNEL = int(environ.get('dpx_log', 0))
+LOG_CHANNEL = int(environ.get('-1001980529724', 0))
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'JOSPSupport')
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "True")), True)
 IMDB = is_enabled((environ.get('IMDB', "True")), True)
